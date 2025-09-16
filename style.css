@@ -1,0 +1,251 @@
+/* ===== Reset básico ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Header + Banner ===== */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.banner {
+  width: 100%;
+  max-width: 720px;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.banner img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Fonte moderna ===== */
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: linear-gradient(135deg, #4A90E2, #ffffff);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 20px;
+  transition: background 0.3s ease;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ===== Textura no fundo ===== */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== Container do formulário ===== */
+.container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 35px;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  max-width: 720px;
+  width: 100%;
+  animation: fadeIn 0.6s ease;
+  backdrop-filter: blur(8px);
+  margin-top: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* ===== Estilo dos inputs ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+label {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  background: #fff;
+  color: #333;
+  resize: vertical;
+  min-height: 45px;
+}
+
+/* ===== Animações ao focar ===== */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #4A90E2;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.4);
+  transform: scale(1.01);
+}
+
+/* ===== Botão ===== */
+button[type="submit"] {
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4A90E2, #357ABD);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(135deg, #357ABD, #2d5ea8);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(53, 122, 189, 0.4);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* ===== Mensagem de feedback ===== */
+#mensagem {
+  margin-top: 18px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 1rem;
+  color: green;
+  min-height: 20px;
+}
+
+/* ===== Dark Mode automático ===== */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: linear-gradient(135deg, #1e1e1e, #121212);
+  }
+  .container {
+    background: rgba(30, 30, 30, 0.95);
+    color: #eee;
+  }
+  h1 {
+    color: #fff;
+  }
+  input,
+  textarea {
+    background: #2a2a2a;
+    color: #eee;
+    border: 1px solid #444;
+  }
+  input:focus,
+  textarea:focus {
+    border-color: #4A90E2;
+    box-shadow: 0 0 8px rgba(74, 144, 226, 0.6);
+  }
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 600px) {
+  .container {
+    padding: 24px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .banner img {
+    height: 120px;
+  }
+}
+
+/* ===== Animações ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.container {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(145deg, #ffffff, #f1f1f1);
+  padding: 35px;
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* sombra mais forte */
+  max-width: 720px;
+  width: 100%;
+  animation: fadeIn 0.6s ease;
+  box-shadow: 
+  0 10px 30px rgba(0, 0, 0, 0.25), 
+  0 6px 15px rgba(0, 0, 0, 0.15);
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  background: linear-gradient(135deg, #2a5298, #1e3c72);
+  padding: 30px 20px;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 -4px 15px rgba(0,0,0,0.25);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.footer img {
+  height: 60px;
+  object-fit: contain;
+  filter: brightness(0) invert(1); /* deixa branco no fundo escuro */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.footer img:hover {
+  transform: scale(1.1);
+  filter: brightness(1) invert(0); /* volta ao original no hover */
+}
+
+@media (max-width: 600px) {
+  .footer img {
+    height: 45px;
+  }
+}
+
+}
+
