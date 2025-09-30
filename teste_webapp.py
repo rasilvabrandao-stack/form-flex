@@ -1,11 +1,9 @@
-import requests # type: ignore
+import requests
 import json
 
-WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzoy5CkS4jbdFEVgvqfa9xziyup1Z9TrznPa_ppLgHOdn2l9TJKnsnDZDXjgsQZPKcv6g/exec"  # URL do deploy do Apps Script
+WEBAPP_URL = "https://script.google.com/macros/s/AKfycbzTlQpsLZxemQN0WwNJOHiLaTPsWouD8YkFK9NN17oXTHGTrQzyndlML_CPP8rl7W34zA/exec"  # URL do seu Apps Script Web App
 
 pedido = {
-    "emailCliente": "teste@cliente.com",
-    "empresa": "Minha Empresa",
     "requisitante": "Raul",
     "projeto": "Projeto X",
     "itens": "Item 1, Item 2",
